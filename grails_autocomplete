@@ -74,6 +74,10 @@ _grails_comp(){
 				COMPREPLY=( $(compgen -W "${plugins}" -- ${cur}) )
 				return 0
 				;;
+			dbm-gorm-diff)
+				COMPREPLY=( $(compgen -W "changelog-.groovy" -- ${cur}) )
+				return 0
+				;;
 			help)
 				local opts=$(_get_scripts)
 				COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
